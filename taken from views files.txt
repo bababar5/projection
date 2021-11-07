@@ -1,0 +1,12 @@
+Navbar
+
+<% if(!currentUser) {%>
+                    <a class="nav-link" href="/login">Login</a>
+                    <a class="nav-link" href="/register">Register</a>
+                    <% } else {%>
+                    <a class="nav-link" href="/logout">Logout</a>
+                    <% } %>
+
+
+boilerplate:
+<%- include('../partials/flash')%>

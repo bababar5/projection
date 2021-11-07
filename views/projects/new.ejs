@@ -1,0 +1,54 @@
+<% layout('layouts/boilerplate')%>
+<div class="row">
+    <h1 class="text-center">פרויקט חדש</h1>
+    <div class="col-md-6 offset-md-3">
+        <form action="/projects" method="POST" novalidate class="validated-form" enctype="multipart/form-data">
+            <div class="mb-3">
+                <label class="form-label" for="title">כותרת</label>
+                <input class="form-control" type="text" id="title" name="project[title]" required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="location">מיקום</label>
+                <input class="form-control" type="text" id="location" name="project[location]" required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="participants">מספר משתתפים</label>
+                <div class="input-group">
+                    <input type="text" class="form-control" id="participants" aria-label="participants
+                        aria-describedby="participants-label" name="project[participants]" required>
+                </div>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label" for="description">תיאור</label>
+                <textarea class="form-control text-area" type="text" id="description" name="project[description]"
+                    required></textarea>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+            </div>
+            <div class="mb-3">
+                <div class="form-file custom-file">
+                    <input type="file" class="form-file-input" id="image" name="image">
+                    <label class="form-file-label" for="image">
+                        <span class="form-file-text custom-file-label">בחר תמונה\ות</span>
+                        <span class="form-file-button">Browse</span>
+                    </label>
+                </div>
+            </div>
+            <div class="mb-3">
+                <button class="btn btn-success px-5 mt-2">קדימה</button>
+            </div>
+        </form>
+        <a href="/projects">כל הפרויקטים</a>
+    </div>
+</div>

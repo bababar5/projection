@@ -1,0 +1,27 @@
+<% layout('layouts/boilerplate')%>
+
+<div class="row">
+    <div class="col-6">
+        
+        <div class="card mb-3">
+            <% for(let img of project.images) { %> 
+                <img src="<%= img.url %>" alt="">
+            <% } %> 
+            <div class="card-body">
+                <h5 class="card-title"><%= project.title%></h5>
+                <p class="card-text"><%= project.description%></p>
+            </div>
+            <ul class="list-group pr-0 list-group-flush">
+                <li class="list-group-item text-muted"><%= project.location%></li>
+                <li class="list-group-item"><%= project.participants%> משתתפים</li>
+            </ul>
+        </div>
+
+    </div>
+    
+</div>
+
+<script>
+    const project = <%- JSON.stringify(project) %>
+</script>
+
